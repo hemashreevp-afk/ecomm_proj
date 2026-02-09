@@ -1,0 +1,34 @@
+{
+  "seller": [
+    {
+      "id": "10fb",
+      "name": "Hemashree",
+      "email": "hemaseller@abc.com",
+      "password": "hemaseller@1"
+    },
+    {
+      "id": "05dc",
+      "name": "venkatesh",
+      "email": "venkatesheller@abc.com",
+      "password": "seller@1"
+    },
+    {
+      "id": "e8ed",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "d67b",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "9d80",
+      "name": "",
+      "password": "",
+      "email": ""
+    }
+  ]
+}

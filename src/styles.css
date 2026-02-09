@@ -1,0 +1,50 @@
+body{
+    font-family: sans-serif;
+}/* You can add global styles to this file, and also import other style files */
+
+.container{
+margin: left 5%;
+margin-right: 5%;
+}
+
+.common-form{
+    margin-top: 50px;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 2px 2px 12px #aaa;
+}
+.form-input{
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 300px;
+    font-size: 14px;
+}
+.form-label{
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+.form-button{
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.commom-form{
+    align-content: center;
+    margin: 50px;
+    border: 70px solid #ccc;
+    padding: 15px;
+    width: 400px;
+    box-shadow: 10px 10px 12px #7e9ad6;
+}
+.sign-up h1{
+    text-align:center;
+    margin-bottom:50px;
+    margin-top:50px;
+    color:#7e9ad6;
+
+}
