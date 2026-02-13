@@ -19,9 +19,9 @@ export class SellerAuth implements OnInit {
   signUp(data: object): void {
     console.warn(data);
 this.sellerService.userSignUp(data).subscribe((result) => {
-  console.warn(result);
+  if (result) {   
   this.router.navigate(['/seller-home']);
-});
+}});
   
   }
 }
