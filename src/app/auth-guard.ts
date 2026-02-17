@@ -1,5 +1,21 @@
-import { CanActivateFn } from '@angular/router';
+import { Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, GuardResult, MaybeAsync } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Seller } from './services/seller';
 
-export const authGuard: CanActivateFn = (route, state) => {
-  return false; // to access the seller-home component, the user must be authenticated. Currently, it returns false, which means the user will not be able to access the seller-home component. You can implement your authentication logic here to return true if the user is authenticated and false otherwise.
-};
+
+@Injectable({
+  providedIn: 'root',
+})  
+
+
+
+export class AuthGuard implements CanActivate {
+  constructor( private sellerService: Seller) { 
+  }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> {
+    return this.sellerService.isSellerLoggedIn;
+  }
+}

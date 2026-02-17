@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
-export class Seller   {
-  constructor(private http: HttpClient) {}
-  userSignUp(data:object){
-    console.warn("seller sign up")
-    return this.http.get('http://localhost:3000/seller')  //adding the data to json server for seller sign up  
-    console.warn("result");
+export class Seller {
+
+  isSellerLoggedIn = new BehaviorSubject<boolean>(false);
+
+  constructor(private http: HttpClient, private router: Router) {}
+
+  userSignUp(data: object): Observable<any> {
+    return this.http.post<any>('http://localhost:3000/seller', data);
   }
 
+  reLoadSeller() {
+    localStorage.removeItem('seller');
+    this.isSellerLoggedIn.next(false);
+    this.router.navigate(['/seller-auth']);
+  }
 }
