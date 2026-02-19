@@ -39,6 +39,7 @@
     @if(showLogin) {
 <div  class="login">
         <h1>Seller Login </h1>
+        <p class="error-message">{{authError}}</p>
         <form #sellerLogin="ngForm" (ngSubmit)=login(sellerLogin.form.value) class="common-form" > 
            <input 
             class="form-input" 

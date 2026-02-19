@@ -56,6 +56,13 @@ margin-right: 5%;
 
 }
 
+.error-message{
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
 .auth-toggle-link{
     color: blueviolet;
     font-size: 14px;
