@@ -16,9 +16,10 @@ export class Seller {
     return this.http.post<any>('http://localhost:3000/seller', data);
   }
 
-  reLoadSeller() {
+ reLoadSeller() {
     localStorage.removeItem('seller');
-    this.isSellerLoggedIn.next(false);
+    this.isSellerLoggedIn.next(true);
     this.router.navigate(['/seller-auth']);
   }
+ 
 }

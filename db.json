@@ -161,6 +161,21 @@
       "name": "venkatesh",
       "password": "venkatesh",
       "email": "venkateshseller@abc.com"
+    },
+    {
+      "id": "5837",
+      "email": "venkateshseller@abc.com",
+      "password": "vevenkatesh"
+    },
+    {
+      "id": "bd6f",
+      "email": "venkateshseller@abc.com",
+      "password": "seller"
+    },
+    {
+      "id": "ae1b",
+      "email": "sdfsd@gmail.com",
+      "password": "werrwe"
     }
   ]
 }
