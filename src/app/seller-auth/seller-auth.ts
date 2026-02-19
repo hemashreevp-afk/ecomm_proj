@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { Seller } from '../services/seller';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; 
+import { signup, login } from '../data-type';
 
 @Component({
   selector: 'app-seller-auth',
@@ -13,39 +14,37 @@ import { CommonModule } from '@angular/common';
 })
 export class SellerAuth implements OnInit {
 showLogin: boolean = false; //used to toggle between login and sign up forms
-  constructor(private sellerService: Seller, private router: Router) {}
+authError: string = ''; //used to store the error message when login fails
+constructor(private sellerService: Seller, private router: Router) {}
 
   ngOnInit(): void {
     this.sellerService.reLoadSeller();//reloading the seller data when the component is initialized
   }
 
-  signUp(data: object): void {
+  signUp(data: signup): void {
+console.warn('Attempting sign up with data:', data);
+this.sellerService.userSignUp(data);
 
-    this.sellerService.userSignUp(data).subscribe((result: any) => {//subscribing to the userSignUp method of the seller service and passing the data object as a parameter
-      if (result) {
-        this.sellerService.isSellerLoggedIn.next(true);//used for authenicattion of seller
-        localStorage.setItem('seller', JSON.stringify(result));  //storing the seller data in local storage  after the sign up
-        this.router.navigate(['/seller-home']);//navigating to the seller home page after the sign up
+    }
+
+    login(data: login): void {
+   console.warn('Attempting login with data:', data);
+this.sellerService.userLogin(data); 
+this.sellerService.isLoggedInError.subscribe((isError) => {
+  console.warn('Login error status:', isError);     
+  if (isError) {
+    this.authError = 'Login failed: Invalid email or password'; 
+        alert('Login failed: Invalid email or password');
       }
-
     });
 
-  }
-login(data: object): void {
-    this.sellerService.userLogin(data).subscribe((result: any) => {//subscribing to the userSignUp method of the seller service and passing the data object as a parameter
-      if (result && result.length > 0) {
-        this.sellerService.isSellerLoggedIn.next(true);//used for authenicattion of seller
-        localStorage.setItem('seller', JSON.stringify(result));  //storing the seller data in local storage  after the login
-        this.router.navigate(['/seller-home']);//navigating to the seller home page after the login
-      }
-
-    });
-
-  }
+    }
   openLogin(): void {
     this.showLogin = true//used to toggle between login and sign up forms
   }
  openSignUp(): void {
     this.showLogin = false;//used to toggle between login and sign up forms
   }
-}
+
+  }
+
