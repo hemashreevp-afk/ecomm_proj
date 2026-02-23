@@ -1,13 +1,28 @@
 <nav class="nav">
-    <h1>E-COMM</h1>
-    <div class="nav-search">
+    <h1><a routerLink="/home">E-COMM</a></h1>
+    @if(menuType === 'default')
+     {
+      <div class="nav-search">
         <input type="text" Placeholder="Serach for product" />
         <button>Searcch</button>
     </div>
-    <ul>
-        <li> <a routerLink="/home">home</a></li>
-        <li><a routerLink="/seller-auth">seller</a></li>
-        <li> <a href="#">Login</a></li>
-        <li><a href="#">Cart(0)</a></li>
-    </ul>
+}
+@switch (menuType) {
+    @case ('default') {
+        <ul>
+            <li> <a routerLink="/home">home</a></li>
+            <li><a routerLink="/seller-auth">seller</a></li>
+            <li> <a href="#">Login</a></li>
+            <li><a href="#">Cart(0)</a></li>
+        </ul>
+    }
+    @case ('seller') {
+        <ul>
+            <li> <a routerLink="">Add Product</a></li>
+            <li><a routerLink="">List</a></li>
+            <li> <a routerLink="#">Logout</a></li>
+            <li> <a routerLink="#">Seller name</a></li>
+        </ul>
+}
+}
 </nav>
