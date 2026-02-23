@@ -33,5 +33,10 @@ this.route.events.subscribe((event) => {
     }
   }
 });
+
   }
+logout():void{
+localStorage.removeItem('seller');
+this.route.navigate(['/h'])
+}
 }
