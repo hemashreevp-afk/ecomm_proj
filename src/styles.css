@@ -10,6 +10,10 @@ margin-right: 5%;
     display: flex;
     justify-content: center;
 }
+.add-product-container{ 
+    display: flex;
+    justify-content: center;   /* Centers horizontally */
+}
 .common-form{
     margin-top: 50px;
     border: 1px solid #cccccc;
@@ -56,6 +60,14 @@ margin-right: 5%;
 
 }
 
+.add-product h1{
+    text-align:center;
+    margin-bottom:50px;
+    margin-top:50px;
+    color:#ba7ed6;
+
+}   
+
 .error-message{
     color: red;
     font-size: 14px;
@@ -69,4 +81,16 @@ margin-right: 5%;
     margin-top: 20px;
     text-align: center;
     display: block;   /* Forces new line */
+}
+.error-p{
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}   
+.message-p{
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
 }
