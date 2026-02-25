@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, NavigationEnd } from '@angular/router';
 import { Route } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { TitleCasePipe } from '../../../node_modules/@angular/common/types/_common_module-chunk';
-import { NgSwitch } from "../../../node_modules/@angular/common/types/_common_module-chunk";
+import { TitleCasePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-header',
@@ -13,9 +13,9 @@ import { NgSwitch } from "../../../node_modules/@angular/common/types/_common_mo
   styleUrl: './header.css',
 })
 export class Header implements OnInit {
-    sellerName:string="";
+    sellerName:string=" ";
 
-  menuType: string = 'default';//used to determine which menu to display based on the user's login status and current route
+ menuType: string = 'default';//used to determine which menu to display based on the user's login status and current route
 
   constructor(private route: Router) { }
 
@@ -26,7 +26,7 @@ this.route.events.subscribe((event) => {
     const currentUrl = event.url;
     console.log('Current URL:', currentUrl);
     if (currentUrl) {
-      if (localStorage.getItem('seller') && currentUrl.includes('/seller')) {
+      if (localStorage.getItem('seller') && currentUrl.startsWith('/seller')) {
         console.log('This seller route and seller is logged in');
        let sellerStore=localStorage.getItem('seller');
        let sellerData=sellerStore && JSON.parse(sellerStore);
@@ -43,6 +43,7 @@ this.route.events.subscribe((event) => {
   }
 logout():void{
 localStorage.removeItem('seller');
+this.sellerName="";
 this.route.navigate(['/'])
 }
 }
