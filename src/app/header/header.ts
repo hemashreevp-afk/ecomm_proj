@@ -30,7 +30,7 @@ this.route.events.subscribe((event) => {
         console.log('This seller route and seller is logged in');
        let sellerStore=localStorage.getItem('seller');
        let sellerData=sellerStore && JSON.parse(sellerStore);
-       this.sellerName = sellerData[0].name;
+       this.sellerName = sellerData.name;//storing the seller name in a variable to display it in the header
       this.menuType = 'seller';
       } else {
         console.log('outside seller route or seller not logged in');
