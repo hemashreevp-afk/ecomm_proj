@@ -28,10 +28,11 @@ export class Seller {
 
 
  reLoadSeller() {
-    localStorage.removeItem('seller');
+  if (localStorage.getItem('seller')) {
     this.isSellerLoggedIn.next(true);
-    this.router.navigate(['/seller-auth']);
+    this.router.navigate(['/seller-home']);
   }
+}
 
   // Login: checks if seller exists
   userLogin(data: login) {
@@ -43,7 +44,7 @@ export class Seller {
         if (result.status === 200 && result.body.length ==1) {
           //this.isSellerLoggedIn.next(true);//used for authenicattion of seller
          this.isLoggedInError.emit(false); // Emit false to indicate login success
-          localStorage.setItem('seller', JSON.stringify(result.body));
+          localStorage.setItem('seller', JSON.stringify(result.body[0]));  //storing the seller data in local storage  after the login
           this.router.navigate(['/seller-home']);//navigating to the seller home page after the sign up  
         return result.body;
       }

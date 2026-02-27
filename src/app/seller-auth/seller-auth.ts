@@ -27,6 +27,7 @@ this.sellerService.userSignUp(data);
 
     }
 
+
     login(data: login): void {
    console.warn('Attempting login with data:', data);
 this.sellerService.userLogin(data); 
@@ -45,6 +46,10 @@ this.sellerService.isLoggedInError.subscribe((isError) => {
  openSignUp(): void {
     this.showLogin = false;//used to toggle between login and sign up forms
   }
-
+reLoadSeller(){
+  if(localStorage.getItem('seller') && this.router.url === '/seller-auth'){
+    this.router.navigate(['/seller-home']);
+  }
+}
   }
 

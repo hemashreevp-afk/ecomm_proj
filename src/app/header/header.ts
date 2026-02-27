@@ -3,6 +3,7 @@ import { Router, RouterLink, NavigationEnd } from '@angular/router';
 import { Route } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TitleCasePipe } from '@angular/common';
+import { ProductService } from '../services/product'; 
 
 
 @Component({
@@ -17,7 +18,7 @@ export class Header implements OnInit {
 
  menuType: string = 'default';//used to determine which menu to display based on the user's login status and current route
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private productService: ProductService) { }
 
   ngOnInit(): void {
   
@@ -30,10 +31,10 @@ this.route.events.subscribe((event) => {
         console.log('This seller route and seller is logged in');
        let sellerStore=localStorage.getItem('seller');
        let sellerData=sellerStore && JSON.parse(sellerStore);
-       this.sellerName = sellerData.name;//storing the seller name in a variable to display it in the header
+       this.sellerName = sellerData.name;
       this.menuType = 'seller';
       } else {
-        console.log('outside seller route or seller not logged in');
+        console.log('outs ide seller route or seller not logged in');
         this.menuType = 'default';
       }
     }

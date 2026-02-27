@@ -1,12 +1,36 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ProductService  } from '../services/product';
+import { Product } from '../data-type';
+import { ChangeDetectorRef } from '@angular/core';  
+
 
 @Component({
   selector: 'app-seller-home',
   standalone: true,
-  imports: [],
-  templateUrl: './seller-home.html',
+  imports: [CommonModule],
+   templateUrl: './seller-home.html',
   styleUrl: './seller-home.css',
 })
-export class SellerHome {
+export class SellerHome implements OnInit   {
+  productList: Product[] = [];
+constructor(private productService: ProductService,private cd:ChangeDetectorRef) { }
 
+ ngOnInit(): void {
+  console.log('SellerHome Loaded');
+
+      this.productService.productList().subscribe({
+      next: (result) => {
+        console.log('Data received', result);
+        this.productList = result;
+        this.cd.detectChanges(); // ✅ ensure view updates
+      },
+      error: (err) => {
+        console.error('Error fetching products:', err);
+      },
+    });
+}
+  
+ 
 }
