@@ -31,6 +31,10 @@ constructor(private productService: ProductService,private cd:ChangeDetectorRef)
       },
     });
 }
-  
- 
+  deleteProduct(id: number) {
+  this.productService.deleteProduct(id).subscribe((result) => {
+    alert("Product deleted successfully" + result);
+  });
+  this.productList=this.productList.filter(product => product.id !== id); // Update local list to reflect deletion
+}
 }

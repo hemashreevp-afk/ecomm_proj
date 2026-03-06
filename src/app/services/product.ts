@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../data-type';
+import { SellerHome } from '../seller-home/seller-home';  
 
 @Injectable({
   providedIn: 'root',
@@ -15,4 +16,8 @@ export class ProductService {
   productList(){
     return this.http.get<Product[]>(`http://localhost:3000/products`);// add api  for get product list
   } 
+  deleteProduct(id: number)
+  {
+    return this.http.delete(`http://localhost:3000/products/${id}`);// add api  for delete product
+  }
 }
