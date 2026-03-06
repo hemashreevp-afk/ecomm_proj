@@ -17,74 +17,47 @@
     {
       "id": "1",
       "name": "iphone14",
-      "price": "1500",
+      "price": 1500,
       "colour": "red",
-      "caterogy": "mobile",
+      "category": "mobile",
       "description": "hello, this is apple product",
-      "imageurl": "https://www.reliancedigital.in/product/apple-iphone-14-256-gb-yellow-mobile-phone-lt5osz-7536775"
+      "imageUrl": "http://localhost:4200/assets/images/iphone_14.png"
     },
     {
-      "id": "d75f",
-      "name": "oppo",
+      "id": "2",
+      "name": "oppo f11",
       "description": "good battery life cycle",
-      "imageUrl": "https://www.amazon.in/Oppo-Glowing-SUPERVOOC-Additional-Exchange/dp/B0CL53RJML",
-      "price": -700,
+      "imageUrl": "http://localhost:4200/assets/images/oppo.png",
+      "price": 700,
       "category": "mobile",
       "colour": "blue"
     },
     {
-      "id": "1b34",
+      "id": "3",
       "name": "samsung A15S",
-      "description": "https://www.amazon.in/Samsung-Storage-Expandable-MediaTek-Dimensity/dp/B0CP7WCMB3",
-      "imageUrl": "https://www.amazon.in/Oppo-Glowing-SUPERVOOC-Additional-Exchange/dp/B0CL53RJML",
-      "price": -900,
+      "description": "samsuung camera quality is good",
+      "imageUrl": "http://localhost:4200/assets/images/samsung_A15JPG.JPG",
+      "price": 900,
       "category": "mobile",
       "colour": "light blue"
     },
     {
-      "id": "e99b",
-      "name": "oppo f11",
-      "description": "oppo product",
-      "imageUrl": "https://www.amazon.in/Fluorite-Purple-Storage-Additional-Exchange/dp/B07PTLD8P9",
+      "id": "8",
+      "name": "oppo",
+      "description": "oppo mobile phone",
+      "imageUrl": "http://localhost:4200/assets/images/oppo.png",
       "price": 450,
       "category": "mobile",
-      "colour": "blue"
-    },
-    {
-      "id": "6707",
-      "name": "vivo",
-      "description": "good camera quality",
-      "imageUrl": "https://shop.vivo.com/in/product/10326?skuId=19304&gad_source=1&gad_campaignid=20651071405&gbraid=0AAAAAqQ8WTURaYo7NYw5qHf2UjwgGgIeb&gclid=EAIaIQobChMI8rrL_eH0kgMVmTODAx315RNMEAYYASABEgKWkvD_BwE",
-      "price": 500,
-      "category": "mobile",
       "colour": "pink"
     },
     {
-      "id": "61f6",
-      "name": "vivo12",
-      "description": "good camera quality",
-      "imageUrl": "https://shop.vivo.com/in/product/10326?skuId=19304&gad_source=1&gad_campaignid=20651071405&gbraid=0AAAAAqQ8WTURaYo7NYw5qHf2UjwgGgIeb&gclid=EAIaIQobChMI8rrL_eH0kgMVmTODAx315RNMEAYYASABEgKWkvD_BwE",
-      "price": 500,
-      "category": "mobile",
-      "colour": "pink"
-    },
-    {
-      "id": "9927",
-      "name": "realme16",
-      "description": "realme product",
-      "imageUrl": "https://www.realme.com/in/realme-16-pro-5g/specs",
-      "price": 560,
-      "category": "mobile",
-      "colour": "light brown"
-    },
-    {
-      "id": "cfee",
-      "name": "realme",
-      "description": "realme product",
-      "imageUrl": "https://www.realme.com/in/realme-16-pro-5g/specs",
-      "price": 560,
-      "category": "mobile",
-      "colour": "light brown"
+      "id": "9",
+      "name": "Laptop",
+      "description": "apple laptop",
+      "imageUrl": "http://localhost:4200/assets/images/LAPTOP.JPG",
+      "price": 23000,
+      "category": "LAPTOP",
+      "colour": "grey"
     }
   ]
 }
