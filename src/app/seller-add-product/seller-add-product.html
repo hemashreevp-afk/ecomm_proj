@@ -1,4 +1,4 @@
-<div class="add-product-container   "> 
+<div class="add-product-container"> 
     <div class="add-product">
         <p class="message-p" >{{addProductMessage}}</p>
     <h1>Add New Product</h1>
@@ -18,7 +18,8 @@
             placeholder="Enter product description" 
             name="description"></textarea> 
            
-                <!-- Image upload -->
+             <div class="form-input image-upload-row">
+              <!-- Image upload -->
           <input
             class="form-input"
             type="file" 
@@ -28,14 +29,21 @@
           />
           
           <!-- Optional preview -->
-          <img *ngIf="imagePreview" [src]="imagePreview" alt="Image preview" width="150" style="margin-bottom:10px;" />
-
+          <!-- Image preview -->
+          <img
+            *ngIf="imagePreview"
+            [src]="imagePreview"
+            alt="Image preview"
+            class="preview-img"
+          />
+          </div>  
           <input
             class="form-input"
             type="number"
             ngModel name="price"
             placeholder="Enter product price"
           />
+          
 
            <input 
             class="form-input" 
@@ -56,4 +64,4 @@
 </form>
 </div>
 
-    </div>>
+    </div>
