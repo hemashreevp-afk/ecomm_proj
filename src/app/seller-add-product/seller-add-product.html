@@ -18,23 +18,26 @@
             placeholder="Enter product description" 
             name="description"></textarea> 
            
-            <input 
-            class="form-input"  
-            type="text"
-            placeholder="Enter product imageurl"
-            ngModel
-            name="imageUrl"
-            />
+                <!-- Image upload -->
+          <input
+            class="form-input"
+            type="file" 
+            ngModel  name="imageUrl" 
+            (change)="onFileSelected($event)"
+            accept="image/*"
+          />
+          
+          <!-- Optional preview -->
+          <img *ngIf="imagePreview" [src]="imagePreview" alt="Image preview" width="150" style="margin-bottom:10px;" />
 
-             <input 
-            class="form-input" 
-            type="number" ngModel 
-            name="price" 
-            placeholder="Enter product price" 
-             name="price"
-             />
+          <input
+            class="form-input"
+            type="number"
+            ngModel name="price"
+            placeholder="Enter product price"
+          />
 
-            <input 
+           <input 
             class="form-input" 
             type="text" ngModel 
             name="category" 
