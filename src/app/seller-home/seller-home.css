@@ -1,4 +1,4 @@
-table{
+/*table{
     text-align:left;
     color:blueviolet;
 }
@@ -7,4 +7,39 @@ table,th,td{
     border-collapse:collapse;
     padding:10px;
     min-width: 160px;
+}*/
+.product-list{
+    margin: 40px auto;
+    width: 90%;
+}
+
+.product-list table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.product-list th{
+    background-color: #fcfcfb;
+    padding: 10px;
+    border: 1px solid #ccc;
+     border-collapse:collapse;
+}
+
+.product-list td{
+    padding: 10px;
+    border: 1px solid #cccccc;
+    vertical-align: middle;
+     border-collapse:collapse;
+}
+
+.product-list img{
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.product-list fa-icon{
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
 }

@@ -1,5 +1,5 @@
 <div class="product-list">
-  
+  <h1>Product List</h1>
   <p>Length: {{ productList.length }}</p>
   <table>
     
@@ -25,7 +25,9 @@
     <td>{{ product.category }}</td>
     <td>{{ product.colour }}</td>
     <td>{{ product.description }}</td>
-    <td><button (click)="deleteProduct(product.id)">Delete</button></td>
+    <td>
+      <fa-icon  (click)="deleteProduct(product.id)" [icon] ="icon" (click)="deleteProduct(product.id)"></fa-icon>
+      <!--<button (click)="deleteProduct(product.id)">Delete</button></td>-->
   </tr>
 </tbody>
   </table>

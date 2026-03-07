@@ -4,17 +4,20 @@ import { CommonModule } from '@angular/common';
 import { ProductService  } from '../services/product';
 import { Product } from '../data-type';
 import { ChangeDetectorRef } from '@angular/core';  
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {faTrash  } from '@fortawesome/free-solid-svg-icons'
 
 
 @Component({
   selector: 'app-seller-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FontAwesomeModule],
    templateUrl: './seller-home.html',
   styleUrl: './seller-home.css',
 })
 export class SellerHome implements OnInit   {
-  productList: Product[] = [];
+  productList: Product[] = []; //empty product list declaration
+  icon=faTrash;// delete  icon for delete action
 constructor(private productService: ProductService,private cd:ChangeDetectorRef) { }
 
  ngOnInit(): void {
@@ -24,7 +27,7 @@ constructor(private productService: ProductService,private cd:ChangeDetectorRef)
       next: (result) => {
         console.log('Data received', result);
         this.productList = result;
-        this.cd.detectChanges(); // ✅ ensure view updates
+        this.cd.detectChanges(); //  ensure view updates
       },
       error: (err) => {
         console.error('Error fetching products:', err);
