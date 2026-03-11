@@ -1,1 +1,67 @@
-<p>seller-update-product works!</p>
+<div class="update-product-container"> 
+    <div class="add-product">
+        <p class="message-p" >{{delProductMessage}}</p>
+    <h1>Update Product</h1>
+    <form #updateProductForm="ngForm" class="common-form" (ngSubmit)="submit(updateProductForm.value)"  >
+<div *ngIf="productData">
+  <input 
+    class="form-input" 
+    type="text"  
+    [(ngModel)]="productData.name" 
+    placeholder="Enter product name" 
+    name="name"
+    />
+    <textarea 
+            class="form-input" 
+            type="text"
+             [(ngModel)]="productData.description" 
+            placeholder="Enter product description" 
+            name="description">
+          </textarea> 
+            
+             <div class="form-input image-upload-row">
+              <!-- Image upload -->
+                <input 
+                class="form-input"
+                 type="file" 
+                 (change)="onFileSelected($event)" 
+                 accept="image/*" 
+                 />
+          
+          <!-- Optional preview -->
+          <!-- Image preview -->
+          <img
+            *ngIf="imagePreview"
+            [src]="imagePreview"
+            alt="Image preview"
+            class="preview-img"
+          />
+          </div>  
+          <input
+            class="form-input"
+            type="number"
+            [(ngModel)]="productData.price"
+            placeholder="Enter product price"
+            name="price"
+          />
+          
+
+           <input 
+            class="form-input" 
+            type="text" 
+             [(ngModel)]="productData.category" 
+            placeholder="Enter product category" 
+            name="category"/>
+
+            <input 
+            class="form-input" 
+            type="text" 
+             [(ngModel)]="productData.colour" 
+            placeholder="Enter product colour" 
+            name="colour"
+            />
+            <button class="form-button" type="submit">Update Product</button>
+        </div>         
+</form>
+</div>
+</div>
