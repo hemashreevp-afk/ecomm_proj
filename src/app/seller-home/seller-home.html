@@ -26,8 +26,10 @@
     <td>{{ product.colour }}</td>
     <td>{{ product.description }}</td>
     <td>
-      <fa-icon  (click)="deleteProduct(product.id)" [icon] ="icon" (click)="deleteProduct(product.id)"></fa-icon>
-      <!--<button (click)="deleteProduct(product.id)">Delete</button></td>-->
+      <fa-icon  (click)="deleteProduct(product.id)" [icon] ="iconDelete" (click)="deleteProduct(product.id)"></fa-icon>
+      <a routerLink='/seller-update-product/{{product.id}}'> <fa-icon  [icon] ="iconEdit" ></fa-icon></a>
+      <!--<button (click)="deleteProduct(product.id)">Delete</button>-->
+    </td>
   </tr>
 </tbody>
   </table>

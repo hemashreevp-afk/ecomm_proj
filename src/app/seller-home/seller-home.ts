@@ -5,19 +5,21 @@ import { ProductService  } from '../services/product';
 import { Product } from '../data-type';
 import { ChangeDetectorRef } from '@angular/core';  
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {faTrash  } from '@fortawesome/free-solid-svg-icons'
+import {faEdit, faTrash  } from '@fortawesome/free-solid-svg-icons'
+import { RouterLink } from "@angular/router";
 
 
 @Component({
   selector: 'app-seller-home',
   standalone: true,
-  imports: [CommonModule,FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, RouterLink],
    templateUrl: './seller-home.html',
   styleUrl: './seller-home.css',
 })
 export class SellerHome implements OnInit   {
   productList: Product[] = []; //empty product list declaration
-  icon=faTrash;// delete  icon for delete action
+  iconDelete=faTrash;// delete  icon for delete action
+  iconEdit=faEdit;//icon for  edit
 constructor(private productService: ProductService,private cd:ChangeDetectorRef) { }
 
  ngOnInit(): void {
