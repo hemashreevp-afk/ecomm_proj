@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import{ ProductService} from '../services/product';
 import { Product } from '../data-type';
+import { form } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-seller-add-product',
@@ -24,7 +25,7 @@ export class SellerAddProduct implements OnInit  {
 
 
   } 
-
+// function for  uplaod the file url and preview the file
   onFileSelected(event: any) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
@@ -37,9 +38,14 @@ export class SellerAddProduct implements OnInit  {
     }
   }
 
-  submit(data:Product): void {
+  submit(form: NgForm): void {
+
+  const data = form.value;
+ 
      if (this.selectedFile) {
     data.imageUrl = 'assets/images/' + this.selectedFile.name;
+
+    
     console.warn('imageUrl set to:', data.imageUrl);
   }
     console.warn('Product data submitted:', data);
@@ -48,6 +54,10 @@ export class SellerAddProduct implements OnInit  {
       alert('Product added successfully!');
       if(response){
         this.addProductMessage = 'Product added successfully!';
+        form.resetForm(); // Reset form
+    //  Reset image preview
+      this.imagePreview = null;
+      this.selectedFile = null;
       }
     }, (error) => {
       console.error('Error adding product:', error);
