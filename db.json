@@ -1,13 +1,13 @@
 {
   "seller": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Hemashree",
       "email": "hemaseller@abc.com",
       "password": "Hemashree"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "venkatesh",
       "email": "venkatesheller@abc.com",
       "password": "venkatesh"
@@ -15,34 +15,7 @@
   ],
   "products": [
     {
-      "id": "1",
-      "name": "iphone14",
-      "price": 1500,
-      "colour": "red",
-      "category": "mobile",
-      "description": "hello, this is apple product",
-      "imageUrl": "http://localhost:4200/assets/images/iphone_14.png"
-    },
-    {
-      "id": "2",
-      "name": "oppo f11",
-      "description": "good battery life cycle",
-      "imageUrl": "http://localhost:4200/assets/images/oppo.png",
-      "price": 700,
-      "category": "mobile",
-      "colour": "blue"
-    },
-    {
-      "id": "3",
-      "name": "samsung A15S",
-      "description": "samsuung camera quality is good",
-      "imageUrl": "http://localhost:4200/assets/images/samsung_A15JPG.JPG",
-      "price": 900,
-      "category": "mobile",
-      "colour": "light blue"
-    },
-    {
-      "id": "8",
+      "id": 1,
       "name": "oppo",
       "description": "oppo mobile phone",
       "imageUrl": "http://localhost:4200/assets/images/oppo.png",
@@ -51,13 +24,110 @@
       "colour": "pink"
     },
     {
-      "id": "9",
+      "id": 2,
       "name": "Laptop",
       "description": "apple laptop",
       "imageUrl": "http://localhost:4200/assets/images/LAPTOP.JPG",
       "price": 23000,
       "category": "LAPTOP",
       "colour": "grey"
+    },
+    {
+      "id": 3,
+      "name": "oppo",
+      "description": "oppo goood battery",
+      "imageUrl": "assets/images/samsung_A15JPG.JPG",
+      "price": 1450,
+      "category": "mobile",
+      "colour": "blue"
+    },
+    {
+      "id": 4,
+      "name": "oppo",
+      "description": "oppo goood battery",
+      "imageUrl": "assets/images/samsung_A15JPG.JPG",
+      "price": 1450,
+      "category": "mobile",
+      "colour": "blue"
+    },
+    {
+      "id": 5,
+      "name": "oppo",
+      "description": "oppo goood battery",
+      "imageUrl": "assets/images/samsung_A15JPG.JPG",
+      "price": 1450,
+      "category": "mobile",
+      "colour": "blue"
+    },
+    {
+      "id": 6,
+      "name": "oppo",
+      "description": "good battery ",
+      "imageUrl": "assets/images/oppo.png",
+      "price": 4500,
+      "category": "mobile",
+      "colour": "blue"
+    },
+    {
+      "id": 7,
+      "name": "oppo",
+      "description": "battery quality",
+      "imageUrl": "assets/images/oppo.png",
+      "price": 14500,
+      "category": "mobile",
+      "colour": "blue"
+    },
+    {
+      "id": 8,
+      "name": "oppo",
+      "description": "oppo mobile phone",
+      "imageUrl": "assets/images/oppo.png",
+      "price": 14500,
+      "category": "mobile",
+      "colour": "blue"
+    },
+    {
+      "id": 9,
+      "name": "oppo",
+      "description": "sadasd",
+      "imageUrl": "assets/images/oppo.png",
+      "price": 1300,
+      "category": "mobile",
+      "colour": "blue"
+    },
+    {
+      "id": 10,
+      "name": "oppo f11",
+      "description": "oppo goodcamera",
+      "imageUrl": "assets/images/oppo.png",
+      "price": 13500,
+      "category": "mobile",
+      "colour": "blue"
+    },
+    {
+      "id": 11,
+      "description": "oppo mobile phone",
+      "price": 500,
+      "category": "mobile",
+      "colour": "pink"
+    },
+    {
+      "name": "oppo12",
+      "description": "oppo mobilephone",
+      "imageUrl": "assets/images/oppo.png",
+      "price": 1750,
+      "category": "mobile",
+      "colour": "blue",
+      "id": 12
+    },
+    {
+      "name": "oppo m12",
+      "description": "ppo mobile phone",
+      "imageUrl": "assets/images/oppo.png",
+      "price": 24500,
+      "category": "mobile",
+      "colour": "blue",
+      "id": 13
     }
   ]
 }
