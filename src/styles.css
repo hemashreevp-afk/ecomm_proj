@@ -10,10 +10,7 @@ margin-right: 5%;
     display: flex;
     justify-content: center;
 }
-.add-product-container{ 
-    display: flex;
-    justify-content: center;   /* Centers horizontally */
-}
+
 .common-form{
     margin-top: 50px;
     border: 1px solid #cccccc;
@@ -94,20 +91,23 @@ margin-right: 5%;
     margin-top: 10px;
     text-align: center;
 }
+/*image upload and preview*/
+
+.image-upload-row input[type="file"]{
+  flex: 1;
+}
+
 .image-upload-row{
   display: flex;
   align-items: center;
   gap: 15px;
-}
-
-.image-upload-row input[type="file"]{
-  width: auto;
+  flex-wrap: wrap;
 }
 
 .preview-img{
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border: 1px solid #ccc;
-  padding: 3px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
 }
