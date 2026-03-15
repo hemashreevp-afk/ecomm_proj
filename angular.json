@@ -18,7 +18,7 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
+            "assets": [  
               {
                 "glob": "**/*",
                 "input": "src/assets",
@@ -26,8 +26,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
-            ]
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+]
           },
           "configurations": {
             "production": {
