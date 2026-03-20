@@ -39,4 +39,9 @@ export class ProductService {
   popularProducts() {
     return this.http.get<Product[]>("http://localhost:3000/products?_limit=3");
   }
+  //logic  need to change after database connected
+  trendyProducts()
+  {
+    return this.http.get<Product[]>("http://localhost:3000/products?_limit=8");
+  }
 }

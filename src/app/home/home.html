@@ -10,8 +10,6 @@
       
     </div>
 
-
-
     <div class="carousel-caption">
       <h4>{{product.name}}</h4>
       <p>Price: ${{product.price}}</p>
@@ -25,13 +23,13 @@
   <h1> Trendy Products</h1>
  <div class="row">
 
-  <div class="col-sm-3">
+  <div class="col-sm-2" *ngFor="let item of trendyProducts">
     <div class="product-item">
-      <img src="assets/images/LAPTOP.JPG"/>
+      <img src="{{item.imageUrl}}"/>
       <div class="product-details">
-        <h6 class="name-head">Apple Laptop</h6>
-        <h6>Price: 75000</h6>
-        <h6>Color: White</h6>
+        <h6 class="name-head">{{item.name}}</h6>
+        <h6>Price: {{item.price}}</h6>
+        <h6>Color: {{item.colour}}</h6>
       </div>
       <div class="product-footer">
         <a href="">View Details</a>
