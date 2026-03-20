@@ -1,11 +1,14 @@
 .nav {
     display: flex;
     justify-content: space-between;
+     flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
 }
 
 .nav h1 {
     color: blueviolet;
-    font-size: 40px;
+    font-size: 20px;
     margin: 0;
 }
 
@@ -24,13 +27,14 @@
 .nav li a {
     text-decoration: none;
     color: blueviolet;
+    text-size-adjust: inherit;
 }
 
 .nav .nav-search input {
     flex: 1;
     color: blueviolet;
     border: 1px solid blueviolet;
-    height: 30px;
+    height: 34px;
     border-right: 0px;
 }
 
@@ -52,4 +56,97 @@ h1 a {
  color: blueviolet;
  text-decoration: none;
 
+ 
+@media (max-width:768px){
+
+    .nav {
+       /* flex-direction:row;
+        align-items:flex-start;*/
+   /* flex-direction:row;*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
 }
+    
+
+    .nav ul{
+        flex-direction:column;
+        width:100%;
+        margin-top:10px;
+    }
+
+    .nav-search{
+        width:100%;
+        margin-top:10px;
+    }
+
+    .nav-search input{
+        width:70%;
+    }
+
+}
+
+}
+
+/*
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#7152fa;
+    color:rgb(235, 19, 91);
+    padding:10px 20px;
+}
+
+.nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.nav-search{
+    display:flex;
+    gap:5px;
+}
+
+.nav-search input{
+    padding:5px;
+}
+
+.nav-search button{
+    padding:5px 10px;
+}
+
+/* 📱 Responsive Design */
+
+
+/*
+@media (max-width:768px){
+
+    .nav{
+        flex-direction:row;
+        align-items:flex-start;
+    }
+
+    .nav ul{
+        flex-direction:column;
+        width:100%;
+        margin-top:10px;
+    }
+
+    .nav-search{
+        width:100%;
+        margin-top:10px;
+    }
+
+    .nav-search input{
+        width:70%;
+    }
+
+}*/

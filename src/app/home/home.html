@@ -1,1 +1,106 @@
-<h1>Home Page</h1>
+<ngb-carousel *ngIf="popularProducts.length">
+
+  <ng-template ngbSlide *ngFor="let product of popularProducts">
+
+    <div class="text-center">
+      <img
+        class="product-slider-image"
+        [src]="product.imageUrl"
+        alt="{{product.name}}">
+      
+    </div>
+
+    <div class="carousel-caption">
+      <h4>{{product.name}}</h4>
+      <p>Price: ${{product.price}}</p>
+    </div>
+
+  </ng-template>
+
+</ngb-carousel>
+<!--staticlist of product-->
+<div class="product-list-wrapper">
+  <h1> Trendy Products</h1>
+ <div class="row">
+
+  <div class="col-sm-2" *ngFor="let item of trendyProducts">
+    <div class="product-item">
+      <img src="{{item.imageUrl}}"/>
+      <div class="product-details">
+        <h6 class="name-head">{{item.name}}</h6>
+        <h6>Price: {{item.price}}</h6>
+        <h6>Color: {{item.colour}}</h6>
+      </div>
+      <div class="product-footer">
+        <a href="">View Details</a>
+        <a href="">Add Cart</a>
+      </div>
+    </div>
+  </div>
+<!--static product list display-->
+<!--
+  <div class="col-sm-3">
+    <div class="product-item">
+      <img src="assets/images/LAPTOP.JPG"/>
+      <div class="product-details">
+        <h6 class="name-head">Apple Laptop</h6>
+        <h6>Price: 75000</h6>
+        <h6>Color: White</h6>
+      </div>
+      <div class="product-footer">
+        <a href="">View Details</a>
+        <a href="">Add Cart</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-3">
+    <div class="product-item">
+      <img src="assets/images/LAPTOP.JPG"/>
+      <div class="product-details">
+        <h6 class="name-head">Apple Laptop</h6>
+        <h6>Price: 75000</h6>
+        <h6>Color: White</h6>
+      </div>
+      <div class="product-footer">
+        <a href="">View Details</a>
+        <a href="">Add Cart</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="product-item">
+      <img src="assets/images/LAPTOP.JPG"/>
+      <div class="product-details">
+        <h6 class="name-head">Apple Laptop</h6>
+        <h6>Price: 75000</h6>
+        <h6>Color: White</h6>
+      </div>
+      <div class="product-footer">
+        <a href="">View Details</a>
+        <a href="">Add Cart</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="product-item">
+      <img src="assets/images/LAPTOP.JPG"/>
+      <div class="product-details">
+        <h6 class="name-head">Apple Laptop</h6>
+        <h6>Price: 75000</h6>
+        <h6>Color: White</h6>
+      </div>
+      <div class="product-footer">
+        <a href="">View Details</a>
+        <a href="">Add Cart</a>
+      </div>
+    </div>
+  </div>
+
+  
+-->
+</div>
+</div>
