@@ -3,8 +3,16 @@
     @if(menuType === 'default')
      {
       <div class="nav-search">
-        <input type="text" Placeholder="Serach for product" />
+        <input type="text" 
+        (keyup)="searchProduct($event)"
+        Placeholder="Serach for product" />
         <button>Searcch</button>
+        <ul class="suggestion-search" *ngIf="searchResult?.length">
+            <li *ngFor=" let item of searchResult">
+                <a>{{item.name}}</a>
+
+            </li>
+        </ul>
     </div>
 }
 @switch (menuType) {
