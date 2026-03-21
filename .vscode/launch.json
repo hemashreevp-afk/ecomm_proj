@@ -20,9 +20,6 @@
       "webRoot": "${workspaceFolder}"
     },
 
-
-
-
     {
       "name": "ng serve",
       "type": "chrome",

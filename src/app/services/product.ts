@@ -44,4 +44,9 @@ export class ProductService {
   {
     return this.http.get<Product[]>("http://localhost:3000/products?_limit=8");
   }
+
+  //auto suggestion based on keyword enterin input text box
+  searchProduct(query: string) {
+  return this.http.get<Product[]>(`http://localhost:3000/products?q=${query}`);
+}
 }
