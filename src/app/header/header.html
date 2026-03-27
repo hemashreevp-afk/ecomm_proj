@@ -4,13 +4,13 @@
      {
       <div class="nav-search">
         <input type="text" 
+        #searchInput
         (keyup)="searchProduct($event)"
         Placeholder="Serach for product" />
-        <button>Searcch</button>
+       <button (click)="submitSearch(searchInput)">Searcch</button>
         <ul class="suggestion-search" *ngIf="searchResult?.length">
             <li *ngFor=" let item of searchResult">
                 <a>{{item.name}}</a>
-
             </li>
         </ul>
     </div>

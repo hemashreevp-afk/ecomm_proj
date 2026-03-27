@@ -70,4 +70,15 @@ export class Header implements OnInit {
 
     }
   }
+
+ submitSearch(input: HTMLInputElement) {
+  const value = input.value;
+
+  console.log(value);
+  this.route.navigate(['search', value]);
+
+  // ✅ clear UI
+  this.searchResult = null;
+  input.value = '';
+}
 }
