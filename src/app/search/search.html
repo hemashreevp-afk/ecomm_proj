@@ -1,0 +1,28 @@
+<div class="search-container">
+  <div class="search-item" *ngFor="let item of searchResult">
+<div class="col-sm-3">
+   <img [src]="item.imageUrl" alt="" />
+</div>
+
+<!--  /*static  ui for search of product)*/-->
+  <!--
+<div class="search-details">
+    <h6>Product-Name</h6>
+    <p><b>Price:1000</b></p>
+    <p><span>colour:red</span><span> Category:Mobile</span></p>
+    <P>Description:</P>
+    <P>search page:ui</P>
+</div>-->
+<div class="col-sm-2" >
+<div class="search-details">
+    <h6>{{item.name}}</h6>
+    <p><b>{{item.price}}</b></p>
+    <p><span>{{item.colour}}</span><span> {{item.category}}</span></p>
+    <P>{{item.description}}</P>
+    <P>{{item.price}}</P>
+</div>
+</div>
+
+
+</div>
+</div>

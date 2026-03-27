@@ -105,13 +105,6 @@
       "colour": "blue"
     },
     {
-      "id": 11,
-      "description": "oppo mobile phone",
-      "price": 500,
-      "category": "mobile",
-      "colour": "pink"
-    },
-    {
       "name": "oppo12",
       "description": "oppo mobilephone",
       "imageUrl": "assets/images/oppo.png",

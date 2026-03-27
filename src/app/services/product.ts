@@ -47,6 +47,7 @@ export class ProductService {
 
   //auto suggestion based on keyword enterin input text box
   searchProduct(query: string) {
-  return this.http.get<Product[]>(`http://localhost:3000/products?q=${query}`);
+  return this.http.get<Product[]>(`http://localhost:3000/products?q=${query}`);//Use q= for partial search (multiple results)
 }
+
 }
