@@ -1,0 +1,11 @@
+<div class="overlay" *ngIf="visible">
+  <div class="alert-box" [ngClass]="type">
+    <h2>{{ title }}</h2>
+    <p>{{ message }}</p>
+
+    <div class="actions">
+      <button *ngIf="type === 'warning'" (click)="confirm()">Yes</button>
+      <button (click)="confirm()">OK</button>
+    </div>
+  </div>
+</div>

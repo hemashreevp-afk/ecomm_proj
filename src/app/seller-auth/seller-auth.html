@@ -1,67 +1,47 @@
 <div class="seller-auth">
+
+    <!-- SIGN UP -->
     @if(!showLogin){
-    <div  class="sign-up">
+    <div class="sign-up">
         <h1>Seller sign-up</h1>
-        <form #sellerSignUp="ngForm" (ngSubmit)=signUp(sellerSignUp.form.value) class="common-form" > 
-            <input 
-            class="form-input" 
-            type="text" 
-            ngModel name="name" 
-            placeholder="Enter your name" 
-            name="name"
-            />
 
-            <input 
-            class="form-input" 
-            type="password" 
-            ngModel name="password" 
-            placeholder="Enter your password" 
-             name="password"
-             />
-
-            <input 
-            class="form-input" 
-            type="text" ngModel 
-            name="email" 
-            placeholder="Enter your email" 
-            name="email"
-            />
-        <button class="form-button" type="submit">Sign Up</button>
-        <a  class="auth-toggle-link" href="#" (click)="openLogin(); $event.preventDefault()" >
-        Already have an account? Login here
-        </a>  
-
-    
-    </form>
-</div>
-    }
-
-    @if(showLogin) {
-<div  class="login">
-        <h1>Seller Login </h1>
-        <p class="error-message">{{authError}}</p>
-        <form #sellerLogin="ngForm" (ngSubmit)=login(sellerLogin.form.value) class="common-form" > 
-           <input 
-            class="form-input" 
-            type="text" ngModel 
-            name="email" 
-            placeholder="Enter your email" 
-            name="email"
-            />
-            <input 
-            class="form-input" 
-            type="password" 
-            ngModel name="password" 
-            placeholder="Enter your password" 
-             name="password"
-             />
-
-           
-                <button class="form-button" type="submit">Login</button>
-            <a href="#" (click)="openSignUp(); $event.preventDefault()" class="auth-toggle-link">
-        Don’t have an account? Sign Up
-      </a>
-            </form>
-        </div>
-    }
+        <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp)" class="common-form">
+            <input class="form-input" type="text" ngModel name="name" placeholder="Enter your name" />
+            <input class="form-input" type="text" ngModel name="email" placeholder="Enter your email" />
+            <input class="form-input" type="password" ngModel name="password" placeholder="Enter your password" />
+            <button class="form-button" type="submit">Sign Up</button>
+            <a class="auth-toggle-link" href="#" (click)="openLogin(); $event.preventDefault()">
+                Already have an account? Login here
+            </a>
+        </form>
     </div>
+    }
+
+    <!-- LOGIN -->
+    @if(showLogin){
+    <div class="login">
+        <h1>Seller Login</h1>
+        <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.form.value)" class="common-form">
+            <input class="form-input" type="text" ngModel name="email" placeholder="Enter your email" />
+            <input class="form-input" type="password" ngModel name="password" placeholder="Enter your password" />
+            <button class="form-button" type="submit">Login</button>
+            <a href="#" (click)="openSignUp(); $event.preventDefault()" class="auth-toggle-link">
+                Don’t have an account? Sign Up
+            </a>
+        </form>
+    </div>
+    }
+
+</div>
+
+<!-- 🔔 TEST BUTTONS -->
+<!--
+<div style="margin-top:20px;">
+  <button (click)="showSuccess()">Show Success Alert</button>
+  <button (click)="showWarning()">Show Warning Alert</button>
+</div>
+-->
+
+<!-- ✅ FIXED COMPONENT NAME -->
+<app-alert-commands #alertBox (onConfirm)="handleConfirm()">
+</app-alert-commands>

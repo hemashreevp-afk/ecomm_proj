@@ -11,6 +11,30 @@
       "name": "venkatesh",
       "email": "venkatesheller@abc.com",
       "password": "venkatesh"
+    },
+    {
+      "name": "hema",
+      "password": "hema",
+      "email": "hemaseller@abc.com",
+      "id": 3
+    },
+    {
+      "name": "hemashree",
+      "email": "hemaseller@abc.com",
+      "password": "hemaseller",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "name": "venaktesh",
+      "email": "venkatesheller@abc.com",
+      "password": "venkatesh",
+      "id": 6
     }
   ],
   "products": [
