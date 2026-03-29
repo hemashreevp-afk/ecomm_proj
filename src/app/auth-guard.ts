@@ -15,7 +15,7 @@ export class AuthGuard implements CanActivate {
   constructor( private sellerService: Seller) { 
   }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> {
-    return this.sellerService.isSellerLoggedIn;
-  }
+  canActivate(): Observable<boolean> {
+    return this.sellerService.isSellerLoggedIn.asObservable();
+}
 }
