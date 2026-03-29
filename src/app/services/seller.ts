@@ -52,8 +52,8 @@ export class Seller {
           this.isSellerLoggedIn.next(true);
           this.loginStatus.next('success'); // success
         } else {
-          this.loginStatus.next('error');   // error
-        }
+          this.loginStatus.next('error');   //   
+             }
       });
   }
 
